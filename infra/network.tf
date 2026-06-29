@@ -9,7 +9,7 @@ resource "azurerm_subnet" "aci" {
   name                 = "${var.prefix}-subnet-aci"
   resource_group_name  = data.azurerm_resource_group.main.name
   virtual_network_name = azurerm_virtual_network.main.name
-  address_prefixes      = ["10.0.1.0/24"]
+  address_prefixes     = ["10.0.1.0/24"]
 
   delegation {
     name = "aci-delegation"
